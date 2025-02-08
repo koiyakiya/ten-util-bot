@@ -22,4 +22,3 @@ __EXTENSIONS_PATH__ = "utilbot/extensions"
 
 # Discord bot token (Always change in .env)
 __TOKEN__ = os.environ["TOKEN"]
-

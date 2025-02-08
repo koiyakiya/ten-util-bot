@@ -8,6 +8,7 @@ _log = logging.getLogger(__name__)
 
 plugin = arc.GatewayPlugin("KneelModule")
 
+
 @plugin.listen()
 @plugin.inject_dependencies
 async def kneel_reaction_added(
@@ -22,7 +23,8 @@ async def kneel_reaction_added(
         res = await cur.fetchone()
     _log.debug(res)
     db.exec(INSERT_INTO_KNEEL_ADD, gid, msg.member.id, msg.member.display_name, 1)
-    
+
+
 @arc.loader
 def loader(client: arc.GatewayClient) -> None:
     client.add_plugin(plugin)
