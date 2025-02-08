@@ -1,0 +1,5 @@
+hikari[speedups]
+aiosqlite
+hikari-arc
+uvloop
+python-dotenv
